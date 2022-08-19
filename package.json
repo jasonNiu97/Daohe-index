@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "cross-env FIRST_ENV=serve vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev-test1": "cross-env FIRST_ENV=test1 vue-cli-service serve",
+    "dev-test2": "cross-env FIRST_ENV=test2 vue-cli-service serve"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "element-plus": "^2.2.12",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
@@ -22,6 +27,7 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
@@ -29,6 +35,8 @@
     "eslint-plugin-vue": "^8.0.3",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "unplugin-auto-import": "^0.11.1",
+    "unplugin-vue-components": "^0.22.3"
   }
 }
